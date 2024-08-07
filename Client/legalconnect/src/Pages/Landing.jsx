@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './Landing.css';
 import image from "../Images/law.jpg"
@@ -10,7 +10,7 @@ const Landing = () => {
         <div className="header-content">
           <h1>FIND LEGAL HELP</h1>
           <div className="auth-buttons">
-            <button className="btn">Sign in</button>
+          <Link to="/signin" className="btn">Sign in</Link>
             <button className="btn">Sign up</button>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Landing = () => {
         <section className="how-it-works">
           <h2>How LegalConnect works</h2>
           <div className="steps">
-            {/* Step 1 */}
+           
             <div className="step">
               <img src="path-to-image" alt="Step 1" />
               <p>Step 1 description</p>

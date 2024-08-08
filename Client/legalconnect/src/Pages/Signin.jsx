@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Signin.css';
 
 const Signin = () => {
@@ -23,7 +24,7 @@ const Signin = () => {
                 <div className="footer-links">
                     <a href="#">Forgot your password?</a>
                     <span> | </span>
-                    <a href="#">Create an account</a>
+                    <Link to="/signup">Create an account</Link> {/* Link to Signup page */}
                 </div>
             </div>
             <div className="footer">

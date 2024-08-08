@@ -16,7 +16,7 @@ const Landing = () => {
           <h1>FIND LEGAL HELP</h1>
           <div className="auth-buttons">
             <Link to="/signin" className="btn">Sign in</Link>
-            <Link to="/signup" className="btn">Sign up</Link> {/* Add the route for sign-up if you have it */}
+            <Link to="/signup" className="btn">Sign up</Link>{/* Add the route for sign-up if you have it */}
           </div>
         </div>
       </header>

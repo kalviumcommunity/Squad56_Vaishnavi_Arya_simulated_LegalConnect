@@ -73,7 +73,7 @@ const Landing = () => {
         </section>
 
         <section id="contact">
-          <div className="container">
+          <div className="container-1">
             <div className="contact-info">
               <div className="contact-address">
                 <p>123 Legal Way City, Country</p>

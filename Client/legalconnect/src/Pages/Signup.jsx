@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Signup.css';
-import background from "../Images/oip.jpg"
+import background from "../Images/orange.webp"
 
 const Signup = () => {
   return (
@@ -10,7 +10,7 @@ const Signup = () => {
         <img src={background} alt='background' className="background-image" />
         <h2>Welcome Back!</h2>
         <p>To keep connected with us please login with your personal info</p>
-        <Link to="/signin" className="btn">Sign In</Link>
+        <Link to="/signin" className="btn1">Sign In</Link>
       </div>
       <div className="create-account">
         <h2>Create Account</h2>
@@ -24,7 +24,7 @@ const Signup = () => {
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
-          <button type="submit" className="btn">Sign Up</button>
+          <button type="submit" className="btn01">Sign Up</button>
         </form>
       </div>
     </div>

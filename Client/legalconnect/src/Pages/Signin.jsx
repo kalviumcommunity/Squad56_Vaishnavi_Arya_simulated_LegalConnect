@@ -24,7 +24,7 @@ const Signin = () => {
                 <div className="footer-links">
                     <a href="#">Forgot your password?</a>
                     <span> | </span>
-                    <Link to="/signup">Create an account</Link> {/* Link to Signup page */}
+                    <Link to="/signup">Create an account</Link> 
                 </div>
             </div>
             <div className="footer">

@@ -61,7 +61,8 @@ const Landing = () => {
                 <img src={userImage} alt="User" />
                 <h3>As a client</h3>
                 <p>Find legal help and advice from professionals. All you need is an internet connection.</p>
-                <button>Connect now</button>
+                {/* <button>Connect now</button> */}
+                <Link to="/connectnow"><button>Connect now</button></Link>
               </div>
               <div className="option">
                 <img src={upgradePlanImage} alt="Upgrade Plan" />

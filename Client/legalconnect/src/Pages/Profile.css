@@ -1,0 +1,102 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Profile container styles */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Light background color */
+}
+
+/* Profile card styles */
+.profile-card {
+    background: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text */
+    max-width: 300px; /* Max width for the card */
+    width: 100%; /* Full width within max-width */
+}
+
+/* Profile image styles */
+.profile-image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+/* Heading styles */
+.profile-card h1 {
+    font-size: 24px; /* Font size for the name */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below the name */
+}
+
+/* Paragraph styles */
+.profile-card p {
+    font-size: 16px; /* Font size for institution */
+    color: #777; /* Medium gray text color */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Link styles */
+.links {
+    display: flex;
+    justify-content: space-between; /* Space between links */
+    margin-bottom: 20px; /* Space below the links */
+}
+
+.link {
+    color: #007bff; /* Link color (Bootstrap primary color) */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    gap: 15px; /* Space between social icons */
+}
+
+/* Social link styles */
+.social-link {
+    color: #333; /* Dark icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.social-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .profile-card h1 {
+        font-size: 20px; /* Smaller font size for name */
+    }
+
+    .profile-card p {
+        font-size: 14px; /* Smaller font size for institution */
+    }
+
+    .social-link {
+        font-size: 20px; /* Smaller icon size */
+    }
+}

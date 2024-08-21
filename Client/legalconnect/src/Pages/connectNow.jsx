@@ -1,7 +1,9 @@
 import React from 'react';
 import './ConnectNow.css';
+import { useNavigate } from 'react-router-dom';
 
 const ConnectNow = () => {
+  const navigate = useNavigate();
   return (
     <div className="connectnow-container">
       <aside className="connectnow-sidebar">
@@ -16,7 +18,7 @@ const ConnectNow = () => {
             <li><a href="#">Account</a></li>
           </ul>
         </nav>
-        <button className="connectnow-view-profile">View Profile</button>
+        <button className="connectnow-view-profile" onClick={() => navigate('/profile')}>View Profile</button> 
         <button className="connectnow-logout">Log out</button>
       </aside>
 

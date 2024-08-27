@@ -68,6 +68,7 @@ const Landing = () => {
                 <img src={upgradePlanImage} alt="Upgrade Plan" />
                 <h3>Upgrade Plan</h3>
                 <p>Get access to premium features with our reliability, client management, and more.</p>
+                <button>Upgrade Plan</button>
               </div>
             </div>
           </div>

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Signin.css';
+import axios from 'axios';  // Import axios for making HTTP requests
 
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
 
         if (username.trim() === '' || password.trim() === '') {
@@ -15,23 +16,15 @@ const Signin = () => {
             return;
         }
 
-        // Store in localStorage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-
-        // Store in cookies
-        document.cookie = `username=${username}; path=/;`;
-        document.cookie = `password=${password}; path=/;`;
-
-        // Log to console
-        console.log('Username:', username);
-        console.log('Password:', password);
-
-        // Clear the error message
-        setError('');
-
-        // Post-login logic can go here
-        console.log('Username and password stored successfully');
+        try {
+            const response = await axios.post('/api/login', { username, password });
+            localStorage.setItem('token', response.data.token); // Store JWT in localStorage
+            setError('');
+            // Redirect to another page or handle post-login logic
+            console.log('Login successful');
+        } catch (err) {
+            setError('Invalid username or password.');
+        }
     };
 
     return (
@@ -44,24 +37,24 @@ const Signin = () => {
                 <form onSubmit={handleLogin}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
-                        <input 
-                            type="text" 
-                            id="username" 
-                            name="username" 
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
                             value={username}
-                            onChange={(e) => setUsername(e.target.value)} 
-                            required 
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input 
-                            type="password" 
-                            id="password" 
-                            name="password" 
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)} 
-                            required 
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
                     </div>
                     {error && <div className="error-message">{error}</div>}
@@ -70,7 +63,7 @@ const Signin = () => {
                 <div className="footer-links">
                     <a href="#">Forgot your password?</a>
                     <span> | </span>
-                    <Link to="/signup">Create an account</Link> 
+                    <Link to="/signup">Create an account</Link>
                 </div>
             </div>
             <div className="footer">

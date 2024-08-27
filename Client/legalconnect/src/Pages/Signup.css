@@ -108,16 +108,37 @@
 .btn01 {
     background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px; /* Increased padding for height */
     border: none;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
     text-decoration: none;
     display: block; 
-    width: 80%; 
+    width: 20%; 
     margin-top: 10px;
     text-align: center;
+    font-family: 'Poppins', sans-serif; /* Change this to your preferred font */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: 600;
 }
+
+.btn02 {
+    background-color: black;
+    color: white;
+    padding: 10px 15px; /* Increased padding for height */
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block; 
+    width: 40%; 
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Change this to your preferred font */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: 600;
+}
+
 .btn1 {
     background-color: transparent;
     color: white; 

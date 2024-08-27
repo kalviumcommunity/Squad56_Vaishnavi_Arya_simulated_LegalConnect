@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .landing {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     background-color: #f5f5f5;
     color: #333;
+    padding-bottom: 50px;
+    overflow-x: hidden;
 }
 
 .header {
@@ -15,151 +17,169 @@
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header-content h1 {
-    margin: 0;
-    font-size: 35px;
-    font-weight: bolder;
-    font-family: "Kavoon", serif;
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto; /* Pushes the buttons to the right side */
 }
 
 .auth-buttons .btn {
+    text-decoration: none; /* Remove underline */
     margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #007bff;
+    padding: 0.5rem 1.5rem;
+    border: none;
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 15px;
-    background-color: orange;
-    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.auth-buttons .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+
 .search-bar {
-    padding: 2rem;
+    padding: 3rem 2rem;
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .search-bar h1 {
-    font-size: 30px;
-    margin-bottom: 1rem;
-}
-
-.search-input {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .search-input input {
-    padding: 0.5rem;
-    width: 300px;
+    padding: 0.75rem;
+    width: 350px;
     border: 1px solid #ddd;
     border-right: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 25px 0 0 25px;
+    transition: border-color 0.3s;
+}
+
+.search-input input:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .search-input .btn {
-    padding: 0.5rem 1rem;
-    border: 1px solid #007bff;
+    padding: 0.75rem 2rem;
     background-color: #007bff;
     color: white;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 25px 25px 0;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-input .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 #how-it-works {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-#how-it-works .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 60px 0;
+    background-color: #fafafa;
 }
 
 .steps {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    transform: translateY(20px);
+    animation: slideInUp 1.2s ease forwards;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .step {
     flex: 1;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
 }
 
-.step img {
+.step:hover {
+    transform: translateY(-10px);
+}
+.step img, 
+.option img {
     max-width: 200px;
-    margin-bottom: 20px;
+    border-radius: 20px;
+    margin: 0 auto 20px auto; /* Center align and add margin below */
+    display: block; /* Ensures it takes full width of the container */
+    height: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Adds a soft shadow around the images */
 }
 
-#join-legalconnect {
-    padding: 50px 0;
-}
 
-#join-legalconnect .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 #join-legalconnect h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    animation: bounceIn 1.5s ease;
 }
 
-.join-options {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+/* @keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+} */
 
-.option {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-}
-
-.option img {
-    max-width: 200px; 
-    margin-bottom: 20px;
-}
-
+/* Option Buttons */
 .option button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 12px 25px;
+    background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    /* padding-bottom: 30px; */
+    margin-bottom: 30px;
 }
 
 .option button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
 }
 
+/* Contact Section */
 #contact {
     padding: 50px 0;
     background-image: url('../Images/orange.webp');
@@ -268,20 +288,20 @@
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+
+
 .chat-box {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: #333;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #444;
     color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.chat-box p {
-    margin: 0;
-    font-size: 14px;
-} 
-
-
+.chat-box:hover {
+    transform: translateY(-10px);
+}

@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signin.css';
-import axios from 'axios';  // Import axios for making HTTP requests
+import axios from 'axios';
 
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // Fixed naming convention
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setIsLoggedIn(true);
+        }
+    }, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -16,14 +24,32 @@ const Signin = () => {
             return;
         }
 
+        const loginData = {
+            name: username,
+            password: password
+        };
+
         try {
-            const response = await axios.post('/api/login', { username, password });
-            localStorage.setItem('token', response.data.token); // Store JWT in localStorage
-            setError('');
-            // Redirect to another page or handle post-login logic
-            console.log('Login successful');
+            const res = await axios.post("http://localhost:3000/login", loginData);
+            const { token, name, id } = res.data;
+
+            if (token) {
+                localStorage.setItem("token", token);
+                localStorage.setItem("Username", name);
+                localStorage.setItem("id", id);
+
+                alert("Login Successful!");
+                setIsLoggedIn(true);
+
+                setTimeout(() => {
+                    navigate("/");
+                }, 1500);
+            } else {
+                setError("User not found. Please create an account.");
+            }
         } catch (err) {
-            setError('Invalid username or password.');
+            console.error(err);
+            setError("An error occurred. Please try again.");
         }
     };
 
@@ -61,7 +87,7 @@ const Signin = () => {
                     <button type="submit" className="login-button">Login</button>
                 </form>
                 <div className="footer-links">
-                    <a href="#">Forgot your password?</a>
+                    <Link to="/forgot-password">Forgot your password?</Link>
                     <span> | </span>
                     <Link to="/signup">Create an account</Link>
                 </div>

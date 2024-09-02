@@ -1,9 +1,18 @@
 import React from 'react';
-import './ConnectNow.css';
 import { useNavigate } from 'react-router-dom';
+import './ConnectNow.css';
 
 const ConnectNow = () => {
   const navigate = useNavigate();
+
+  // Function to handle navigation to the Lawyer page
+  const handleCategoryClick = (category) => {
+    if (category === 'Lawyers') {
+      navigate('/lawyers');
+    }
+    // Add more categories and navigation logic if needed
+  };
+
   return (
     <div className="connectnow-container">
       <aside className="connectnow-sidebar">
@@ -18,7 +27,7 @@ const ConnectNow = () => {
             <li><a href="#">Account</a></li>
           </ul>
         </nav>
-        <button className="connectnow-view-profile" onClick={() => navigate('/profile')}>View Profile</button> 
+        <button className="connectnow-view-profile">View Profile</button>
         <button className="connectnow-logout">Log out</button>
       </aside>
 
@@ -39,7 +48,7 @@ const ConnectNow = () => {
           </div>
 
           <div className="connectnow-category-list">
-            <div className="connectnow-category-item">
+            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Lawyers')}>
               <h3>Lawyers</h3>
               <p>49 professionals</p>
               <button>+</button>

@@ -8,6 +8,7 @@ const { userModel } = require('./Model/model.js');
 const bcrypt = require("bcrypt");  // Corrected the import
 const cors = require("cors");
 const app = express();
+const jwt =require('jsonwebtoken')
 
 app.use(cors());
 app.use(express.json());  
@@ -46,6 +47,38 @@ app.post('/signup', async (req, res) => {  // Changed 'router' to 'app'
         res.status(500).send("An error occurred during signup.");
     }
 });
+
+app.post('/login',async(req,res)=>{
+    const data=req.body 
+    try{
+        const user = await userModel.findOne({name:data.name})
+        if (!user){
+            return res.send("User not found! Please create a account!")
+        
+        }
+        const hashPasswordMatch=await bcrypt.compare(data.password,user.password)
+        if (hashPasswordMatch){
+            const token =jwt.sign(
+                {id:user.id,name:user.name},
+                process.env.jwtsecret
+            )
+            res.json({
+                token:token,message:"You logged in successfully",
+                id:user._id,
+            })
+        }
+        else{
+            res.status(401).send("Incorrect Password!!")
+        }
+        
+    }catch(error){
+        console.error(error)
+    }
+
+})
+
+
+
 
 if (require.main === module) {
     connected();

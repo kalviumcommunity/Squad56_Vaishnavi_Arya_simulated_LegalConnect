@@ -16,7 +16,7 @@ body {
     background-color: #000;
     color: #fff;
     padding: 1rem;
-    height: 60px;
+    height: 100px;
 }
 
 .navbar .logo {
@@ -29,7 +29,7 @@ body {
 /* Signin Box Styles */
 .signin-box {
     background-color: #fff;
-    width: 300px;
+    width: 350px;
     margin: auto;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

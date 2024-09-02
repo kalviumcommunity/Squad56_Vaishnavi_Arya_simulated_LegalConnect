@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 const userRouter = require('./Routes/Route.js');  // Adjust the path if necessary
 const { connected, isConnected } = require('./db.js');
-const port = 3000;
+const port = 3001;
 const { userModel } = require('./Model/model.js');  
 const bcrypt = require("bcrypt");  // Corrected the import
 const cors = require("cors");

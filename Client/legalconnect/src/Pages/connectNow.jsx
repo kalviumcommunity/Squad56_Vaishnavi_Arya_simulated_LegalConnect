@@ -5,10 +5,16 @@ import './ConnectNow.css';
 const ConnectNow = () => {
   const navigate = useNavigate();
 
-  // Function to handle navigation to the Lawyer page
+  // Function to handle navigation based on the category clicked
   const handleCategoryClick = (category) => {
     if (category === 'Lawyers') {
       navigate('/lawyers');
+    } else if (category === 'Legal Services') {
+      navigate('/legalservices');
+    } else if (category === 'Legal Assistance') {
+      navigate('/legalassistance');
+    } else if (category === 'Legal Representation') {
+      navigate('/legalrepresentation');
     }
     // Add more categories and navigation logic if needed
   };
@@ -44,7 +50,7 @@ const ConnectNow = () => {
           <div className="connectnow-header">
             <h2>Categories</h2>
             <p>Last update: January 23, 2023 at 2:39 PM</p>
-            <button className="connectnow-add-category">Add category</button>
+            <button className="connectnow-add-category">Add category </button>
           </div>
 
           <div className="connectnow-category-list">
@@ -53,22 +59,22 @@ const ConnectNow = () => {
               <p>49 professionals</p>
               <button>+</button>
             </div>
-            <div className="connectnow-category-item">
-              <h3>Advocates</h3>
-              <p>7 professionals</p>
-              <button>+</button>
-            </div>
-            <div className="connectnow-category-item">
+            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Services')}>
               <h3>Legal Services</h3>
               <p>13 services</p>
               <button>+</button>
             </div>
-            <div className="connectnow-category-item">
+            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Lawyers')}>
+              <h3>Advocates</h3>
+              <p>7 professionals</p>
+              <button>+</button>
+            </div>
+            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Assistance')}>
               <h3>Legal Assistance</h3>
               <p>63 services</p>
               <button>+</button>
             </div>
-            <div className="connectnow-category-item">
+            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Representation')}>
               <h3>Legal Representation</h3>
               <p>23 professionals</p>
               <button>+</button>

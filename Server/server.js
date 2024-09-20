@@ -4,7 +4,8 @@ require("dotenv").config();
 const userRouter = require('./Routes/Route.js');  // Adjust the path if necessary
 const { connected, isConnected } = require('./db.js');
 const port = 3000;
-const { userModel } = require('./Model/model.js');  
+const {UserModel, AssistanceModel, LawyerModel,RepresentationModel } = require('./Model/model.js');
+
 const bcrypt = require("bcrypt");  // Corrected the import
 const cors = require("cors");
 const app = express();
@@ -76,8 +77,52 @@ app.post('/login',async(req,res)=>{
     }
 
 })
+// Fetch legal assistance data
+app.get('/api/legalassistance', async (req, res) => {
+    const data = req.body
+    try {
+        const assistanceData = await AssistanceModel.find();
+        res.send(assistanceData);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error fetching legal assistance data.");
+    }
+});
 
+// Fetch lawyer data
+app.get('/api/lawyers', async (req, res) => {
+    const data=req.body 
+    try {
+        const lawyersData = await LawyerModel.find(); 
+        res.send(lawyersData);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error fetching lawyer data.");
+    }
+});
 
+app.get('/api/legalrepresentation', async (req, res) => {
+    const data=req.body
+    try {
+
+        const representationData = await RepresentationModel.find();
+        res.send(representationData);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error fetching legal representation data.");
+    }
+});
+
+// app.get('/api/legalconsultation', async (req, res) => {
+//     const data=req.body
+//     try {
+//         const consultationData = await ConsultationModel.find();
+//         res.send(consultationData);
+//     } catch (error) {
+//         console.error("Error fetching legal consultation data:", error);
+//         res.status(500).send("Error fetching legal consultation data.");
+//     }
+// });
 
 
 if (require.main === module) {

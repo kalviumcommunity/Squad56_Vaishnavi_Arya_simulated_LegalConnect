@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ConnectNow.css';
+import { Link } from 'react-router-dom';
 
 const ConnectNow = () => {
   const navigate = useNavigate();
@@ -25,11 +26,11 @@ const ConnectNow = () => {
         <h2>LegalConn.io</h2>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li><a href="#">Professional</a></li>
             <li><a href="#">Browse</a></li>
             <li><a href="#">Law</a></li>
-            <li><a href="#">Book</a></li>
+            <li><Link to="/lawbooks">Books</Link> </li>
             <li><a href="#">Account</a></li>
           </ul>
         </nav>

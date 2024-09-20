@@ -8,6 +8,7 @@ import Lawyer from './Pages/lawyer';
 import LegalServices from './Pages/LegalServices'; // Import the LegalServices component
 import LegalAssistance from './Pages/legalassistance';
 import LegalRepresentation from './Pages/LegalRepresentation';
+import LawBooks from './Pages/LawBooks';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/legalservices" element={<LegalServices />} />
           <Route path="/legalassistance" element = {<LegalAssistance/>}/>
           <Route path="/legalrepresentation" element = {<LegalRepresentation/>}/>
+          <Route path="/lawbooks" element = {<LawBooks/>}/>
         </Routes>
       </div>
     </Router>

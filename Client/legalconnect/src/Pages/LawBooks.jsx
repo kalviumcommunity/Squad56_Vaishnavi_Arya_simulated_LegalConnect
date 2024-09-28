@@ -1,9 +1,9 @@
 import React from 'react';
 // import './lawbooks.css';
 import book1 from "../Images/book1.jpg";
-// import book2 from "../Images/book2.jpg";
-// import book3 from "../Images/book3.jpg";
-// import logophoto from "../Images/logophoto.jpg";
+import book2 from "../Images/indianlaw2.jpg";
+import book3 from "../Images/indianlaw3.webp";
+import logophoto from "../Images/logophoto.jpg";
 
 const LawBooks = () => {
   const books = [
@@ -12,21 +12,21 @@ const LawBooks = () => {
       title: 'Constitution of India',
       author: 'Dr. B. R. Ambedkar',
       description: 'The Constitution of India is the supreme law of India. It lays down the framework that defines fundamental political principles, establishes the structure, procedures, and duties of government institutions, and sets out fundamental rights, directive principles, and the duties of citizens.',
-      image: 'book1.jpg',
+      image: book1
     },
     {
       id: 2,
       title: 'Law of Contracts in India',
       author: 'Avtar Singh',
       description: 'A comprehensive book on Contract Law in India, which is an essential subject for students, practitioners, and professionals. It covers key aspects of contracts including performance, breach, and remedies.',
-      // image: 'book2.jpg',
+      image: book2,
     },
     {
       id: 3,
       title: 'Indian Penal Code (IPC)',
       author: 'Ratanlal & Dhirajlal',
       description: 'The Indian Penal Code (IPC) is the primary penal code of India, which outlines various offenses and provides the punishments for them. This book is a must-have for anyone studying or practicing criminal law in India.',
-      // image: 'book3.jpg',
+      image: book3,
     }
   ];
 
@@ -36,7 +36,7 @@ const LawBooks = () => {
       <nav className="navbar navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            {/* <img src={logophoto} alt='logo' style={{ height: '80px', width: 'auto' }} /> */}
+            <img src={logophoto} alt='logo' style={{ height: '80px', width: 'auto' }} />
             LegalConnect
           </a>
           <ul className="nav">
@@ -55,7 +55,7 @@ const LawBooks = () => {
           {books.map(book => (
             <div className="col-md-4" key={book.id}>
               <div className="card">
-                {/* <img src={book.id === 1 ? book1 : book.id === 2 ? book2 : book3} className="card-img-top" alt={book.title} /> */}
+                <img src={book.image} className="card-img-top" alt={book.title} />
                 <div className="card-body text-center">
                   <h5 className="card-title">{book.title}</h5>
                   <p className="card-text">Author: {book.author}</p>

@@ -16,7 +16,8 @@ const ConnectNow = () => {
       navigate('/legalassistance');
     } else if (category === 'Legal Representation') {
       navigate('/legalrepresentation');
-    }
+    } 
+    
     // Add more categories and navigation logic if needed
   };
 
@@ -65,11 +66,6 @@ const ConnectNow = () => {
               <p>13 services</p>
               <button>+</button>
             </div>
-            <div className="connectnow-category-item" onClick={() => handleCategoryClick('Lawyers')}>
-              <h3>Advocates</h3>
-              <p>7 professionals</p>
-              <button>+</button>
-            </div>
             <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Assistance')}>
               <h3>Legal Assistance</h3>
               <p>63 services</p>
@@ -80,11 +76,11 @@ const ConnectNow = () => {
               <p>23 professionals</p>
               <button>+</button>
             </div>
-            <div className="connectnow-category-item">
+            {/* <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Consultation')}>
               <h3>Legal Consultation</h3>
               <p>11 services</p>
               <button>+</button>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

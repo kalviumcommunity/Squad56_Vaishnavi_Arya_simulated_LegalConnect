@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 const ConnectNow = () => {
   const navigate = useNavigate();
 
-  // Function to handle navigation based on the category clicked
   const handleCategoryClick = (category) => {
     if (category === 'Lawyers') {
       navigate('/lawyers');
@@ -16,9 +15,11 @@ const ConnectNow = () => {
       navigate('/legalassistance');
     } else if (category === 'Legal Representation') {
       navigate('/legalrepresentation');
-    } 
+    } else if (category === 'Law') {
+      navigate('/law'); 
+    }
     
-    // Add more categories and navigation logic if needed
+    
   };
 
   return (
@@ -30,8 +31,7 @@ const ConnectNow = () => {
             <li><Link to="/">Home</Link></li>
             <li><a href="#">Professional</a></li>
             <li><a href="#">Browse</a></li>
-            <li><a href="#">Law</a></li>
-            <li><Link to="/lawbooks">Books</Link> </li>
+            <li><Link to="/law">Law</Link></li>        <li><Link to="/lawbooks">Books</Link> </li>
             <li><a href="#">Account</a></li>
           </ul>
         </nav>
@@ -76,11 +76,7 @@ const ConnectNow = () => {
               <p>23 professionals</p>
               <button>+</button>
             </div>
-            {/* <div className="connectnow-category-item" onClick={() => handleCategoryClick('Legal Consultation')}>
-              <h3>Legal Consultation</h3>
-              <p>11 services</p>
-              <button>+</button>
-            </div> */}
+           
           </div>
         </section>
       </main>

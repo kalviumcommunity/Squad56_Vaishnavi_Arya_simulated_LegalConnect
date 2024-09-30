@@ -1,0 +1,98 @@
+/* Container for the entire law page */
+.law-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header section styles */
+  .law-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .law-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .law-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Section that contains all law categories */
+  .law-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Styles for each law category card */
+  .law-category {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .law-category:hover {
+    transform: translateY(-5px);
+  }
+  
+  .law-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .law-category p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .law-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .law-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+  }
+  
+  .law-category ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Media queries to ensure responsiveness */
+  @media (max-width: 768px) {
+    .law-header h1 {
+      font-size: 2rem;
+    }
+  
+    .law-header p {
+      font-size: 1rem;
+    }
+  
+    .law-category h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Optional: Add hover effects and animations for better user experience */
+  .law-category:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  

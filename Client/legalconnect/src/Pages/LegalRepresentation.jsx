@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';  // Import axios
+import axios from 'axios';  
 import logophoto from "../Images/logophoto.jpg";
 
 const LegalRepresentation = () => {
@@ -9,8 +9,8 @@ const LegalRepresentation = () => {
   useEffect(() => {
     const fetchRepresentationData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/legalrepresentation");  // Adjust the API endpoint if needed
-        setRepresentation(res.data);  // Set the data in the state
+        const res = await axios.get("http://localhost:3000/api/legalrepresentation"); 
+        setRepresentation(res.data); 
       } catch (error) {
         console.error("Error fetching legal representation data:", error);
       }

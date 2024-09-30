@@ -1,5 +1,5 @@
 import React from 'react';
-import './legalservices.css'; // Create a new CSS file for styling
+import './legalservices.css'; 
 import logophoto from "../Images/logophoto.jpg"
 
 const LegalServices = () => {

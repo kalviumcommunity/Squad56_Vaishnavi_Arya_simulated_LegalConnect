@@ -1,0 +1,183 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+  }
+  
+  .upgrade-container {
+    padding: 50px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .upgrade-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .upgrade-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .upgrade-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  .benefits h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+  }
+  
+  .benefits ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .benefits ul li {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .benefits ul li:before {
+    content: '✓';
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+  }
+  
+  /* Pricing Section */
+  .pricing {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .pricing h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .price-option {
+    border: 1px solid #dcdde1;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .price-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .price-option h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .price-option p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .price-option .price {
+    font-size: 2.2rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .price-option button {
+    padding: 10px 30px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .price-option button:hover {
+    background-color: #2ecc71;
+  }
+  
+  .premium {
+    background-color: #f9f9f9;
+    border: 2px solid #e74c3c;
+  }
+  
+  /* Footer Section */
+  .upgrade-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .upgrade-footer a {
+    color: #2980b9;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .upgrade-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .upgrade-container {
+      padding: 20px;
+    }
+  
+    .pricing-options {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .price-option {
+      width: 90%;
+    }
+  
+    .benefits {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  

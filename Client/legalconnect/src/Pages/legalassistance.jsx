@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './legalservices.css'; 
 import logophoto from "../Images/logophoto.jpg";
 import axios from "axios"
-// import { set } from 'mongoose';
+
 
 
 const LegalAssistance = () => {
@@ -13,7 +13,6 @@ const LegalAssistance = () => {
     const fetchAssistanceData = async () => {
       try {
         const res = await axios.get("http://localhost:3000/api/legalassistance");
-        // console.log(res.data)
         setAssistance(res.data);  
 
       } catch (error) {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; 
 import './lawyer.css';
 import person1 from "../Images/person 1.jpg";
 import logophoto from "../Images/logophoto.jpg";
@@ -11,7 +12,7 @@ const Lawyer = () => {
     const fetchLawyersData = async () => {
       try {
         const res = await axios.get("http://localhost:3000/api/lawyers");
-        console.log(res.data)
+        console.log(res.data);
         setLawyers(res.data);
       } catch (error) {
         console.error("Error fetching lawyer data:", error);
@@ -52,7 +53,8 @@ const Lawyer = () => {
                   <p className="card-text">Expertise: {lawyer.expertise}</p>
                   <p>Contact: {lawyer.contact}</p>
                   <p>Rating: {lawyer.rating}</p>
-                  <a href="#" className="btn btn-dark">Book Appointment</a>
+                  <Link to="/bookappointment" className="btn btn-dark">Book Appointment</Link>
+
                 </div>
               </div>
             </div>

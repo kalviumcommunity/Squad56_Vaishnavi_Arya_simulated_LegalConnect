@@ -1,8 +1,10 @@
 import React from 'react';
-// import './lawbooks.css';
 import book1 from "../Images/book1.jpg";
 import book2 from "../Images/indianlaw2.jpg";
 import book3 from "../Images/indianlaw3.webp";
+import book4 from "../Images/book4.jpg";  // Add images for new books
+import book5 from "../Images/book5.jpg";
+import book6 from "../Images/book6.jpg";
 import logophoto from "../Images/logophoto.jpg";
 
 const LawBooks = () => {
@@ -27,6 +29,27 @@ const LawBooks = () => {
       author: 'Ratanlal & Dhirajlal',
       description: 'The Indian Penal Code (IPC) is the primary penal code of India, which outlines various offenses and provides the punishments for them. This book is a must-have for anyone studying or practicing criminal law in India.',
       image: book3,
+    },
+    {
+      id: 4,
+      title: 'Introduction to the Constitution of India',
+      author: 'Durga Das Basu',
+      description: 'This book provides an in-depth understanding of the Constitution of India, explaining its background, interpretation, and legal principles. A must-read for students and professionals of constitutional law.',
+      image: book4,
+    },
+    {
+      id: 5,
+      title: 'Principles of Criminal Law',
+      author: 'Andrew Ashworth',
+      description: 'This book covers the fundamentals of criminal law and helps students understand criminal responsibility and the framework of offenses. Suitable for both Indian and international readers.',
+      image: book5,
+    },
+    {
+      id: 6,
+      title: 'Administrative Law',
+      author: 'I. P. Massey',
+      description: 'This book provides a clear explanation of administrative law in India, with examples and interpretations of legal principles concerning the functioning of government and public authorities.',
+      image: book6,
     }
   ];
 
@@ -54,7 +77,7 @@ const LawBooks = () => {
         <div className="row mt-4">
           {books.map(book => (
             <div className="col-md-4" key={book.id}>
-              <div className="card">
+              <div className="card mb-4">
                 <img src={book.image} className="card-img-top" alt={book.title} />
                 <div className="card-body text-center">
                   <h5 className="card-title">{book.title}</h5>

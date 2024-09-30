@@ -6,7 +6,7 @@ import axios from 'axios';
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // Fixed naming convention
+    const [isLoggedIn, setIsLoggedIn] = useState(false); 
     const [error, setError] = useState('');
     const navigate = useNavigate();
 

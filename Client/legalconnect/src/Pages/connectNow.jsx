@@ -31,7 +31,8 @@ const ConnectNow = () => {
             <li><Link to="/">Home</Link></li>
             <li><a href="#">Professional</a></li>
             <li><a href="#">Browse</a></li>
-            <li><Link to="/law">Law</Link></li>        <li><Link to="/lawbooks">Books</Link> </li>
+            <li><Link to="/law">Law</Link></li>       
+            <li><Link to="/lawbooks">Books</Link> </li>
             <li><a href="#">Account</a></li>
           </ul>
         </nav>

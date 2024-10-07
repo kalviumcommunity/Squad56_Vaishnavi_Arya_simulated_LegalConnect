@@ -1,240 +1,18 @@
-/* .connectnow-container {
-    display: flex;
-    padding-right: 55px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.connectnow-sidebar {
-    width: 240px;
-    background: linear-gradient(135deg, #333, #444);
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
-}
-
-.connectnow-sidebar:hover {
-    background: linear-gradient(135deg, #444, #555);
-}
-
-.connectnow-sidebar h2 {
-    margin-bottom: 40px;
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.connectnow-sidebar nav ul {
-    list-style: none;
-    margin-bottom: 120px;
-}
-
-.connectnow-sidebar nav ul li {
-    margin: 15px 0;
-    margin-left: -40px;
-}
-
-.connectnow-sidebar nav ul li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.connectnow-sidebar nav ul li a:hover {
-    background: #ff7b00;
-    color: #fff;
-}
-
-.connectnow-view-profile,
-.connectnow-logout {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    background: #555;
-    color: white;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.connectnow-view-profile:hover,
-.connectnow-logout:hover {
-    background: #ff7b00;
-}
-
-.connectnow-main-content {
-    flex: 1;
-    padding: 20px;
-    width: 100%;
-    overflow-y: auto;
-    background-color: #f7f7f7;
-    border-left: 1px solid #ddd;
-    padding-right: 30px;
-    transition: background 0.3s ease;
-}
-
-.connectnow-main-content:hover {
-    background-color: #fff;
-}
-
-.connectnow-top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.connectnow-search {
-    padding: 8px;
-    max-width: 600px;
-    width: 900px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border 0.3s;
-}
-
-.connectnow-search:focus {
-    border-color: #ff7b00;
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 123, 0, 0.5);
-}
-
-.connectnow-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.connectnow-icons .connectnow-icon {
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.connectnow-icons .connectnow-icon:hover {
-    transform: scale(1.2);
-    color: #ff7b00;
-}
-
-.connectnow-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.connectnow-header h2 {
-    margin: 0;
-    font-size: 26px;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.connectnow-header h2:hover {
-    color: #ff7b00;
-}
-
-.connectnow-header p {
-    color: #888;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.connectnow-add-category {
-    padding: 8px 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.connectnow-add-category:hover {
-    background-color: #ff7b00;
-    transform: scale(1.05);
-}
-
-.connectnow-category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.connectnow-category-item {
-    background-color: #eee;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.connectnow-category-item:hover {
-    background-color: #ff7b00;
-    color: #fff;
-    transform: translateY(-3px);
-}
-
-.connectnow-category-item h3 {
-    margin: 0;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-.connectnow-category-item p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-}
-
-.connectnow-category-item button {
-    padding: 7px 15px;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.connectnow-category-item button:hover {
-    background-color: #ff7b00;
-    transform: scale(1.1);
-} */
-
-
-/* Container */
 .connectnow-container {
     display: flex;
     padding-right: 55px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif; /* Font style */
+    font-family: 'Roboto', sans-serif; 
 }
 
-/* Sidebar */
 .connectnow-sidebar {
     width: 240px;
     background: linear-gradient(135deg, #333, #444);
     color: white;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -243,16 +21,16 @@
     height: 100vh;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
+    margin-left: -30px;
 }
 
-/* Sidebar Hover */
 .connectnow-sidebar:hover {
     background: linear-gradient(135deg, #444, #555);
 }
 
-/* Sidebar Header */
 .connectnow-sidebar h2 {
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 28px;
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
@@ -260,7 +38,6 @@
     color: #ff7b00;
 }
 
-/* Navigation */
 .connectnow-sidebar nav ul {
     list-style: none;
     margin-bottom: 120px;
@@ -286,10 +63,11 @@
     color: #fff;
 }
 
-/* Button Styles */
 .connectnow-view-profile,
 .connectnow-logout {
     margin: 10px 0;
+    margin-top: -2px;
+    margin-bottom: 10px;
     padding: 10px;
     border: none;
     background: #555;
@@ -308,7 +86,6 @@
     background: #ff7b00;
 }
 
-/* Main Content */
 .connectnow-main-content {
     flex: 1;
     padding: 20px;
@@ -324,7 +101,7 @@
     background-color: #fff;
 }
 
-/* Top Bar */
+
 .connectnow-top-bar {
     display: flex;
     justify-content: space-between;
@@ -332,7 +109,6 @@
     margin-bottom: 20px;
 }
 
-/* Search Bar */
 .connectnow-search {
     padding: 10px 15px;
     max-width: 600px;
@@ -382,6 +158,7 @@
 .connectnow-add-category {
     padding: 10px 15px;
     background-color: #333;
+    /* height: 100px; */
     color: white;
     border: none;
     border-radius: 4px;
@@ -409,6 +186,7 @@
     background-color: #eee;
     padding: 20px;
     display: flex;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;

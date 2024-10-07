@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './legalservices.css'; 
 import logophoto from "../Images/logophoto.jpg";
 import axios from "axios"
-
+import { Link } from 'react-router-dom';
 
 
 const LegalAssistance = () => {
@@ -35,10 +35,14 @@ const LegalAssistance = () => {
             LegalConnect
           </a>
           <ul className="nav">
-            <li className="nav-item"><a className="nav-link text-light" href="#">Home</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">About</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">Services</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">Contact</a></li>
+            <li className="nav-item">
+            <Link to="/" className="nav-link text-light">Home</Link></li>
+            <li className="nav-item">
+            <Link to="/aboutus" className="nav-link text-light">About</Link></li>
+            <li className="nav-item">
+            <Link to="/service" className="nav-link text-light">Services</Link></li>
+            <li className="nav-item">
+            <Link to="/contactus" className="nav-link text-light">Contact</Link></li>
           </ul>
         </div>
       </nav>

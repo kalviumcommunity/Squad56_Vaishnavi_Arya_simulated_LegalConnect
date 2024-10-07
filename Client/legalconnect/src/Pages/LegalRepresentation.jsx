@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  
 import logophoto from "../Images/logophoto.jpg";
+import { Link } from 'react-router-dom'; 
 
 const LegalRepresentation = () => {
   const [representation, setRepresentation] = useState([]);
@@ -29,10 +30,14 @@ const LegalRepresentation = () => {
             LegalConnect
           </a>
           <ul className="nav">
-            <li className="nav-item"><a className="nav-link text-light" href="#">Home</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">About</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">Services</a></li>
-            <li className="nav-item"><a className="nav-link text-light" href="#">Contact</a></li>
+            <li className="nav-item">
+            <Link to="/" className="nav-link text-light">Home</Link></li>
+            <li className="nav-item">
+            <Link to="/aboutus" className="nav-link text-light">About</Link></li>
+            <li className="nav-item">
+            <Link to="/service" className="nav-link text-light">Services</Link></li>
+            <li className="nav-item">
+            <Link to="/contactus" className="nav-link text-light">Contact</Link></li>
           </ul>
         </div>
       </nav>

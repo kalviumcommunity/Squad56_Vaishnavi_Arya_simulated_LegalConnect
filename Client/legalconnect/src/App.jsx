@@ -12,6 +12,9 @@ import LawBooks from './Pages/LawBooks';
 import BookAppointment from './Pages/Bookappointments'; 
 import Law from './Pages/Law'; 
 import Upgrade from './Pages/Upgrade'; 
+import AboutUs from './Pages/About';
+import Services from './Pages/service';
+import ContactUs from './Pages/contactus';
 
 
 const App = () => {
@@ -31,6 +34,9 @@ const App = () => {
           <Route path="/law" element={<Law />} /> 
           <Route path="/bookappointment" element={<BookAppointment/>}/>
           <Route path="/upgrade" element={<Upgrade />} /> 
+          <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path="/service" element={<Services/>}/>
+          <Route path="/contactus" element={<ContactUs/>}/>
         </Routes>
       </div>
     </Router>

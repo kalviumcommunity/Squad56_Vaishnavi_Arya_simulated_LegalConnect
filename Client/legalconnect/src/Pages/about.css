@@ -1,0 +1,111 @@
+/* Container for the About section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8; /* Softer background */
+    padding: 50px;
+  }
+  
+  /* About content styling */
+  .about-content {
+    max-width: 900px;
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Header styling with modern look */
+  .about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #1e3a8a; /* Dark blue color */
+    letter-spacing: 2px; /* Slight spacing for elegant look */
+    position: relative;
+  }
+  
+  /* Underline effect for the heading */
+  .about-content h1::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #3b82f6; /* Light blue underline */
+    display: block;
+    margin: 10px auto 0;
+    transition: width 0.4s ease;
+  }
+  
+  /* Text paragraph styling */
+  .about-content p {
+    font-size: 1.3rem;
+    color: #374151; /* Darker grey */
+    line-height: 1.8;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect on paragraph text */
+  .about-content p:hover {
+    color: #1e3a8a; /* Changes to dark blue on hover */
+  }
+  
+  /* Visible class for fade-in effect */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Button for the Learn More or About section */
+  .about-content button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #2563eb; /* Bright blue button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effect on the button */
+  .about-content button:hover {
+    background-color: #1d4ed8; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+  }
+  
+  /* Add subtle animation to the header underline */
+  .about-content h1:hover::after {
+    width: 80px; /* Expands underline on hover */
+  }
+  
+  /* Floating effect on the entire card */
+  .about-content:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Slight floating effect */
+  }
+  
+  /* Additional subtle entry animation */
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+  .about-content {
+    animation: slide-in 1s ease-out;
+  }
+  

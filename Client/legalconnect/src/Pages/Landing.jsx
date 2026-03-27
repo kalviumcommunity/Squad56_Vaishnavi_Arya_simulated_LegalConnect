@@ -99,7 +99,7 @@ const Landing = () => {
                 <p>Services</p>
                 <p>Consultation</p>
                 <p>Book</p>
-                <p>Online Presence</p>
+                {/* <p>Online Presence</p> */}
               </div>
             </div>
           </div>
